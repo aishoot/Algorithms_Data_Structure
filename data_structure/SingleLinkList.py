@@ -86,21 +86,18 @@ class SingleLinkList():
             # 将插入位置的前一个节点的next指向新节点
             pre.next = node
 
-    # 删除节点
     def remove(self, item):
         cur = self._head
         pre = None
-        while cur != None:  # 考虑到删除的不只是一个元素
-            if cur.item == item:  # 找到了指定元素
+        while cur != None:   # 考虑到删除的不只是一个元素
+            if cur.elem == item:
                 if not pre:  # 如果第一个就是删除的节点
-                    self._head = cur.next  # 将头指针指向头节点的后一个节点
+                    self._head = cur.next   # 将头指针指向头节点的后一个节点
                 else:
                     pre.next = cur.next  # 将删除位置前一个节点的next指向删除位置的后一个节点
-                break
             else:
-                # 继续按链表后移节点
                 pre = cur
-                cur = cur.next
+            cur = cur.next
 
     # 查找节点是否存在
     def search(self,item):
