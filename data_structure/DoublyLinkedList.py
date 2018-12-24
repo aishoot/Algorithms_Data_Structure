@@ -65,16 +65,6 @@ class DLinkList(object):
             cur.next = node  # 将尾节点cur的next指向node
             node.prev = cur  # 将node的prev指向cur
 
-
-    # 查找元素是否存在
-    def search(self, item):
-        cur = self._head
-        while cur != None:
-            if cur.item == item:
-                return True
-            cur = cur.next
-        return False
-
     # 在指定位置添加节点
     def insert(self, pos, item):
         if pos <= 0:
@@ -115,6 +105,16 @@ class DLinkList(object):
                     break
                 cur = cur.next
 
+    # 查找元素是否存在
+    def search(self, item):
+        cur = self._head
+        while cur != None:
+            if cur.item == item:
+                return True
+            cur = cur.next
+        return False
+
+    
 if __name__ == "__main__":
     ll = DLinkList()
     ll.add(1)
