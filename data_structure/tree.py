@@ -6,7 +6,7 @@
 """
 
 # 通过使用Node类中定义三个属性，分别为elem本身的值，还有lchild左孩子和rchild右孩子
-class Node(object):
+class Node:
     """节点类"""
     def __init__(self, elem=-1, lchild=None, rchild=None):
         self.elem = elem
@@ -14,7 +14,7 @@ class Node(object):
         self.rchild = rchild
 
 # 树的创建,创建一个树的类，并给一个root根节点，一开始为空，随后添加节点
-class Tree(object):
+class Tree:
     def __init__(self, root=None):
         self.root = root
 
