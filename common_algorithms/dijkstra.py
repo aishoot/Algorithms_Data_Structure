@@ -3,7 +3,7 @@
 """
 from heapq import heappop, heappush
 
-def Dijkstra(G, v0, INF=999):  # INF 为设定的无限远距离值
+def Dijkstra(G, v0, INF=float('inf')):  # INF 为设定的无限远距离值
     selected_vertex = set()   # 就是MWeb笔记中的集合S, 已经选择的顶点
     current_v = v0  #  当前选择的出发找下一个的顶点
     v0_dis = dict((k, INF) for k in G.keys())  # 源顶点v0到其余各顶点的初始路程
